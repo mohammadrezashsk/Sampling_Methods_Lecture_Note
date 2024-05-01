@@ -1,0 +1,727 @@
+\section*{هدف نمونه گیری}
+\lr{$\theta$}: پارامتر   
+$\leftarrow$
+مقدار مشخصی دارد ولی نامعلوم است.
+برای مثال:
+\begin{itemize}
+	\item[$\mu$] میانگین 
+	$\bar{y_n} \overset{estimator\footnotemark}{\leftarrow} $
+	\item[$P$]نسبت
+	$\bar{p} \overset{estimator}{\leftarrow} $ 
+\end{itemize}
+\footnotetext{برآوردگر}
+انتخاب نمونه با حجم زیاد اگر چه 
+\underline{دقت بیشتر}
+همراه است، ولی باعث 
+\underline{هزینه بیشتر }
+نیز می شود.برای مثال به تکثیر پرسشنامه یا هزینه طبقه بندی و ثبت اطالاعات نمونه می توان اشاره کرد.
+\section*{چند تعریف}
+\subsection*{جامعه:}
+مجموعه ای از اشیاء/افراد که قرار است استنباط خاصی در مورد آنها صورت بگیرد.
+\subsection*{استنباط:}
+بررسی شواهد موجود و رسیدن به یک حقیقت
+\subsection*{نمونه}
+بخشی از جامعه که به روش معیین تعیین شده است.
+\subsection*{صفت متغییر}
+ویژگی از شی/فرد به شی/فرد دیگر تغییر کند.
+انواع متغییرها:
+\begin{enumerate}
+	\item کمی:
+	\begin{enumerate}
+		\item گسسته:تعداد فرزندان یک خانواده
+		\item پیوسته:وزن افراد
+	\end{enumerate}
+	\item کیفی:
+	\begin{enumerate}
+		\item اسمی:گروه خونی
+		\item رتبه ای:مدارک دانشگاهی
+	\end{enumerate}
+\end{enumerate}
+\subsection*{داده}
+مقادیر مشخص شده ی متغییر، داده است.
+تقسیم بندی داد ها بر اساس نقش پژوهشگر در تولید آن:
+\begin{enumerate}
+	\item داده های مشاهده ای\footnote{\lr{Survey Studyُ}}
+	مبتنی بر مشاهده، پژوهشگر صرفاََ داد ها را مشاهده و ثبت می کند.
+	\item داده های آزمایشی \footnote{\lr{ٍExperiment Study}}
+	پژوهشگر داده ها را تولید می کند.
+	مثل:پرتاب تاس
+\end{enumerate}
+\subsection*{آمارگیری:}
+فعالیتی است که در آن اطلاعات مورد نیاز برای یک ویژگی بر اساس بخشی یا تمام جامعه و به روشی معین انجام می شود.
+
+انواع آمارگیری:
+\begin{enumerate}
+	\item سرشماری: براساس کل جامعه انجام می شود.
+	\item  نمونه گیری: براساس بخشی لز جامعه انجام می شود.
+\end{enumerate}
+\subsection*{مزایای نمونه گیری}
+\begin{enumerate}
+	\item سرعت بالاتر
+	\item هزینۀ کمتر
+	\item کیفیت بالاتر در جمع داده ها
+	\item محاسبات کمتر و در نتیجه دقت بیشتر
+	\item حفظ اعضای جامعه برای مثال در نمونه گیری از خط تولید
+\end{enumerate}
+خطاهای آمارگیری:
+\begin{enumerate}
+	\item خطای نمونه گیری: 
+	
+	ناظر بر این است که برآورد پارامتر بر اساس بخشی از داده(نمونه) انجام می شود.
+	\item خطای غیر نمونه گیری: 
+	
+	هر خطایی به غیر از خطای نمونه گیری. برای مثال: اشتباه در پرکردن پرسشنامه
+\end{enumerate}
+انواع نمونه گیری:
+\begin{enumerate}
+	\item نمونه گیری احتمالاتی:
+	هر فرد جامعه احتمال مشخص و غیر صفر برای ورود به نمونه دارد.
+	\item نمونه گیری غیر احتمالاتی: 
+	هر فرد جامعه احتمال مشخص و غیر صفر برای ورود به نمونه دارد.
+\end{enumerate}
+جامعه هدف:
+\begin{enumerate}
+	\item \lr{Who}
+	\item \lr{When}
+	\item \lr{Where}
+\end{enumerate}
+مثال: دانشجویان نمونه گیری 1 ترم دوم 1402 دانشگاه تهران
+
+چارچوب: لیست تمام واحدهای جامعه
+
+ویژگی های یک برآورد خوب:
+\begin{enumerate}
+	\item نااریبی:
+	\begin{equation*}
+		E(\hat{\theta})=\theta
+	\end{equation*}
+	\item مقدار واریانس با افزایش حجم نمونه کاهش بیابد.
+	\item 
+	\begin{equation*}
+		CV\footnotemark=\frac{Var(\hat{\theta})}{E(\hat{\theta})}	
+	\end{equation*}
+	\footnotetext{ضریب تغییرات}
+	\section*{نمونه گیری تصادفی ساده (بدون جایگزاری و با جایگزاری)}
+	\footnote{\lr{SRS: Simple Random Sample}}
+	\begin{equation*}
+		\begin{pmatrix}
+			y_1 \\
+			\vdots \\
+			\vdots \\
+			\vdots \\
+			y_N
+		\end{pmatrix}
+		\overset{SRS}{\longrightarrow} 
+		\begin{pmatrix}
+			y_1 \\
+			\vdots \\
+			y_n
+		\end{pmatrix}
+	\end{equation*}
+	\begin{enumerate}
+		\item $N$: حجم جامعه متناهی است.
+		\item $n$: حجم نمونه
+	\end{enumerate}
+	این روش برای مواقعی است که می خواهیم از جامعه ای به حجم
+	$N$
+	نمونه ای به حجم 
+	$n$
+	بگیریم به گونه ای که تمام نمونه های ممکن شانس یکسان در انتخاب شدن داشته باشند.
+\end{enumerate}
+\subsection*{بدون جایگزاری:}
+\subsection*{مثال: تمام نمونه های سه بعدب از جامعه زیر به همرا احتمال انتخاب شدن آن بنویسید.}
+\begin{equation*}
+	\begin{pmatrix}
+		1 \\
+		2 \\
+		3 \\
+		4
+	\end{pmatrix}
+\end{equation*}
+تعداد نمونه های ممکن برابر است با:
+\begin{equation*}
+	\binom{4}{3}=4
+\end{equation*}
+نمونه های ممکن در یک نمونه تصادفی ساده بدون جایگزاری:
+\begin{gather*}
+	(1,2,3) \rightarrow p=\frac{1}{4}\times\frac{1}{3}\times\frac{1}{3}\times\frac{1}{2}\times 6
+	=\frac{1}{4} \\
+	(1,3,4) \rightarrow p=\frac{1}{4} \\
+	(2,3,4) \rightarrow p=\frac{1}{4} \\
+	(1,2,4) \rightarrow p=\frac{1}{4}
+\end{gather*}
+\subsection*{تعداد نمونه های 
+	$n$
+	تایی به روش
+	$SRS$
+	از جامعه ی 
+	$N$ 
+	عضوی به شرط حضور فرد خاص در جامعه:
+}
+\begin{equation*}
+	\binom{N-1}{n-1}
+\end{equation*}
+\rule{\textwidth}{0.4pt}
+\section*{برآورد میانگین جامعه: }
+\begin{equation*}
+	\begin{pmatrix}
+		y_1 \\
+		\vdots \\
+		\vdots \\
+		\vdots \\
+		y_N
+	\end{pmatrix}
+	\overset{n}{\rightarrow}
+	\begin{pmatrix}
+		y_1 \\
+		\vdots \\
+		y_n
+	\end{pmatrix}
+\end{equation*}
+\begin{itemize}
+	\item[$n$]: حجم نمونه
+	\item[$\bar{y_N}$]: میانگین حامعه \\
+	$\bar{y_N}=\frac{1}{N}\sum_{i=1}^{N}y_i$
+	\item[$S^2$] واریانس جامعه \\
+	$S^2=\frac{1}{N-1}\sum_{i=1}^{N}(y_i-\bar{y_N})^2$:
+	\item[$\sigma^2$] واریانس جامعه \\
+	$\sigma^2=\frac{1}{N}\sum_{i=1}^{N}(y_i-\bar{y_N})^2 \Rightarrow N\sigma^2=(N-1)S^2$
+	\item[$\bar{y_N}$]: میانگین نمونه ای \\
+	$\bar{y_n}=\frac{1}{n}\sum_{i=1}^{n}y_i$
+	\item[$s^2$]: واریانس نمونه ای \\
+	$s^2=\frac{1}{n-1}\sum_{i=1}^{n}(y_i-\bar{y_n})^2$
+\end{itemize}
+\subsection*{اثبات کتید که 
+	$\bar{y_n}$
+	یک برآوردگر مناسب برای 
+	$\bar{y_N}$
+	است.
+}
+\subsection*{$E(\bar{y_n})=\bar{y_N}$}
+متغییر تصادفی 
+$Z_i$
+را به شکل زیر تعریف می کنیم.
+\begin{gather*}
+	Z_i=
+	\begin{cases}
+		1 & y_i~appear~in~sample\\
+		0 & Other~where
+	\end{cases} \\
+	Z_i\sim B(1,\frac{1}{N}) \\
+	E(Z_i)=\frac{n}{N} \\
+	Var(Z_i)=\frac{n}{N}(1-\frac{n}{N})\\
+	Cov(Z_i,Z_j)=\frac{n}{N}\frac{n-1}{N-1}-\frac{n^2}{N^2}
+\end{gather*}
+می توان گفت که:
+\begin{equation*}
+	\bar{y_n}=\frac{Z_1y_1+Z_2y_2+\dots+Z_Ny_N}{n}
+\end{equation*}
+برای اثبات:
+\begin{equation*}
+	E(\bar{y_n})=E[\frac{\sum_{i=1}^{N}Z_iy_i}{n}]
+	=\frac{1}{n}E[\sum_{i=1}^{N}Z_iy_i]
+	=\frac{1}{n}\sum_{i=1}^{N}y_iE(Z_i)
+\end{equation*}
+\begin{LTR}
+	\begin{tabular}{c|cc}
+		$Z$ & $1$ & $0$ \\ 
+		\hline 
+		$P(Z=z)$ & $P(Z=1)$ & $P(Z=0)$
+	\end{tabular}
+\end{LTR}
+نتیجه می دهد که:
+\begin{equation*}
+	E(Z_i)=P(Z=1)=\frac{\binom{N-1}{n-1}}{\binom{N}{n}}=\frac{n}{N}
+	\footnotemark
+\end{equation*}
+\footnotetext{احتمال انتخاب نمونه با وجود یک عضو خاص در آن}
+ئر نهایت:
+\begin{equation*}
+	E(\bar{y_n})=\frac{1}{n}\sum_{i=1}^{N}y_iP(Z_i=1)
+	=\frac{1}{\cancel{n}}.\frac{\cancel{n}}{N}\sum_{i=1}^{N}y_i
+	=\frac{\sum_{i=1}^{N}y_i}{N}=\bar{y_N}
+\end{equation*}
+\subsection*{$Var(\bar{y_n})=(1-\frac{n}{N})\frac{S^2}{n}$}
+اثبات:
+
+میدانیم که:
+\begin{gather*}
+	S^2=\frac{1}{N-1}\sum_{i=1}^{N}(y_i-\bar{y_N})^2=\frac{1}{N-1}\{\sum_{i=1}^{N}y_i^2+\sum_{i=1}^{N}\bar{y_N}^2-2\sum_{i=1}^{N}y_i\bar{y_N}\}
+	= \\=
+	\frac{1}{N-1}\{\sum_{i=1}^{N}y_i^2+N\bar{y_N}^2-2\bar{y_N}\sum_{i=1}^{N}y_i\}
+	=\frac{1}{N-1}\{\sum_{i=1}^{N}y_i^2-N\bar{y_N}^2\}
+\end{gather*}
+همچنین:
+\begin{equation*}
+	(\sum X_i)^2=\sum X_i^2+\underset{i\neq j}{\sum \sum}X_iX_j
+\end{equation*}
+\begin{multline*}
+	Var(\bar{y_n})=Var[\frac{1}{n}\sum_{i=1}^{N}Z_iy_i]
+	=\frac{1}{n^2}\{\sum_{i=1}^{N}Var(Z_iy_i)+\underset{i\neq j}{\sum \sum }Cov(Z_iy_i,Z_jy_j) \}
+	= \\ =
+	\frac{1}{n^2}\{\sum_{i=1}^{N}y_i(E(Z_i^2)-(E(Z_i))^2)+\underset{i\neq j}{\sum \sum }y_iy_jCov(Z_i,Z_j) \}
+	=\\=
+	\frac{1}{n^2}\{\sum_{i=1}^{N}y_i(P(Z_i=1)-(P(Z_i=1))^2)+\underset{i\neq j}{\sum \sum }y_iy_jCov(Z_i,Z_j) \}
+	=\\=
+	\frac{1}{n^2}\{\sum_{i=1}^{N}\frac{n}{N}(1-\frac{n}{N})+\underset{i\neq j}{\sum \sum }y_iy_j \frac{n}{N}(\frac{n-1}{N-1}-\frac{n}{N}) \} 
+	=\\=
+	\frac{1}{n^2}.\frac{n}{N}.\frac{N-n}{N}\{\sum_{i=1}^{N}y_i^2 -\frac{1}{N-1} \underset{i\neq j}{\sum \sum }y_iy_j\}
+	\\=\\
+	\frac{1}{n^2}.\frac{n}{N}.\frac{N-n}{N}\{\sum_{i=1}^{N}y_i^2 -\frac{1}{N-1}(\sum_{i=1}^{N}y_i)^2+
+	\frac{1}{N-1}\sum_{i=1}^{N}y_i^2\} 
+	\\=\\
+	\frac{1}{n^2}.\frac{n}{N}.\frac{N-n}{N}\frac{1}{N-1}\{(N-1)\sum_{i=1}^{N}y_i^2 -(\sum_{i=1}^{N}y_i)^2+
+	\sum_{i=1}^{N}y_i^2\} 
+	= \\=
+	\frac{1}{n^2}.\frac{n}{N}.\frac{N-n}{N}\frac{1}{N-1}\{N\sum_{i=1}^{N}y_i^2 -(\sum_{i=1}^{N}y_i)^2\} 
+	= \\ =
+	\frac{1}{n^2}.\frac{n}{N}.\frac{N-n}{N}\frac{1}{N-1}\{N\sum_{i=1}^{N}y_i^2 -N^2\bar{y_N}^2\} 
+	= \\ =
+	\frac{1}{n^2}.\frac{n}{N}.\frac{N-n}{N}.N\{\frac{1}{N-1}(\sum_{i=1}^{N}y_i^2 -N\bar{y_N}^2)\} 
+	=
+	\frac{1}{n^2}.\frac{n}{N}.\frac{N-n}{N}.NS^2
+	=\\=
+	\frac{1}{n^{\cancelto{1}{2}}}.\frac{\cancel{n}}{\cancel{N}}.\frac{N-n}{N}.\cancel{N}S^2
+	=(1-\frac{n}{N})\frac{S^2}{n}
+\end{multline*}
+از طرفی 
+$S$
+یک آماره ی مربوط به جامعه است و مقدار آن نامعلوم است.
+کافی است ثابت کنیم که 
+$(1-\frac{n}{N})\frac{s^2}{n}$ 
+یک برآوردگر خوب برای 
+$(1-\frac{n}{N})\frac{S^2}{n}$
+است.یعنی:
+\begin{equation*}
+	E[(1-\frac{n}{N})\frac{s^2}{n}]=(1-\frac{n}{N})\frac{S^2}{n}
+	=\Rightarrow \cancel{\frac{1}{n}(1-\frac{n}{N})}E(s^2)=\cancel{\frac{1}{n}(1-\frac{n}{N})}S^2
+	\Rightarrow E(s^2)=S^2
+\end{equation*}
+می دانیم که:
+\begin{equation*}
+	s^2=\frac{\sum_{i=1}^{n}(y_i-\bar{y_n})^2}{n-1}
+	=\frac{\sum_{i=1}^{n}y_i^2-n\bar{y_n}^2}{n-1}
+\end{equation*}
+اثبات:
+\begin{multline*}
+	E(s^2)=E[\frac{\sum_{i=1}^{n}y_i^2-n\bar{y_n}^2}{n-1}]
+	=\frac{1}{n-1}\{E[\sum_{i=1}^{n}y_i^2-n\bar{y_n}^2]\}
+	=\frac{1}{n-1}\{\frac{n}{N}\sum_{i=1}^{N}y_i^2 -nE(\bar{y_n}^2)\}
+	\\=
+	\frac{1}{n-1}\{\frac{n}{N}\sum_{i=1}^{N}y_i^2 - \frac{N-n}{N}S^2-n\bar{y_N}^2\}
+	=\frac{1}{n-1} \frac{n}{N}\{\sum_{i=1}^{N}y_i^2-N\bar{y_N}^2 - \frac{N-n}{n}S^2\}
+	=\\=
+	\frac{1}{n-1} \frac{n}{N}\{(N-1)S^2 - \frac{N}{n}S^2-S^2 \}
+	=\frac{1}{n-1} \frac{n}{N}\{NS^2 - \frac{N}{n}S^2 \}
+	= \\ =
+	\frac{N}{n-1} \frac{n}{N}\{S^2 - \frac{1}{n}S^2 \}
+	=\frac{\cancel{N}}{\cancel{n-1}} \frac{\cancel{n}}{\cancel{N}}\frac{\cancel{n-1}}{\cancel{n}}S^2
+	=S^2
+\end{multline*}
+در نتیجه:
+\begin{equation*}
+	\hat{Var}(\bar{y_n})=(1-\frac{n}{N})s^2
+\end{equation*}
+\rule{\textwidth}{0.4pt}
+\section*{برآورد مجموع جامعه}
+\begin{itemize}
+	\item[$T_N$] مجموع جامعه
+	\item[$T_n$] مجموع نمونه
+\end{itemize} 
+می خواهیم بررسی کنیم که برآوردگر 
+$nT_n$
+یک برآوردگر نااریب هست یا نه
+\begin{equation*}
+	E(T_n)=nE(\bar{y_n})=n\bar{y_N}=\frac{n}{N}T_N
+\end{equation*}
+که مشاهده کردیم نااریب
+\underline{نیست}
+.
+با استفاده از خاصیت خطی امیدد در می یابیم که برآوردگر
+$\frac{N}{n}T_n$
+یک برآوردگر نااریب است.
+
+زیرا:
+\begin{gather*}
+	E(\frac{N}{n}T_n)=NE(\bar{y_n})=N\bar{y_N}=T_N \\
+	Var(\frac{N}{n}T_n)=N^2Var(\bar{y_n})=N^2(1-\frac{n}{N})\frac{S^2}{n} \\
+	\hat{Var}(\frac{N}{n}T_n)=N^2Var(\bar{y_n})=N^2(1-\frac{n}{N})\frac{s^2}{n}
+\end{gather*}
+\subsection*{مثال}
+دندانپزشک های 
+\lr{A}
+و 
+\lr{B}
+دندان های 200 کودک یک دهکده را بررسی می کنند.
+دندانپزشک 
+\lr{A}
+یک نمونه ی تصادفی مستقل با اندازه ی 20 و تعداد دندان هلی خرااب را مشخص می کند.
+\vspace{1cm}
+\begin{LTR}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\rl{تعداد دندان های خراب} 
+		& 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+		\hline
+		\rl{تعداد بچه ها}
+		&
+		8 & 4 & 2 & 2 & 1 & 4 & 0 & 0 & 0 & 1 & 1 \\
+		\hline
+	\end{tabular}
+\end{LTR}
+\vspace{1cm}
+دندانپزشک 
+\lr{B}
+با همان تکنیک معاینه 200 کودک را معاینه می کند وآنهایی را متمایز می کند که هیچ دندان خرابی ندارند.
+60 کودک هیچ دندان خرابی ندارند.
+تعداد دندان های خراب کودکان این دهکده را با استفاده از روش های زیر برآورد کنید.
+\begin{itemize}
+	\item[الف:] با استفاده از نتیجه ی معاینات دندانپزشک 
+	\lr{A}
+	\begin{gather*}
+		T_n=N\bar{y_n}=200\times (\frac{0\times 8 + 1\times 4 + \dots 10\times 1}{20})
+		=200\times 2.1=420
+	\end{gather*}
+	\item[ب:] با استفاده از نتایج دندانپزشک 
+	\lr{A}
+	و
+	\lr{B}
+	\begin{gather*}
+		T_n=140\times (\frac{0\times 8 + 1\times 4 + \dots 10\times 1}{12})=140\times 3.5=490
+	\end{gather*}
+	\item[ج:] کدام روش دقیق تر است؟
+	\\
+	قسمت ب دقیق تر است زیرا داده های بیشتری در مورد جامعه ی خود داریم و براورد ما در این حالت دقیق تر از حالت الف است.
+\end{itemize}
+\rule{\textwidth}{0.4pt}
+\section*{قضیه ها:}
+\paragraph*{1}
+یک زیر نمونه 
+\lr{SRS}
+به حجم 
+$n_1$
+از یک نمونه به حجم 
+$n_2$
+از یک جامعه یه حجم 
+$N$
+،خود یک نمونه 
+\lr{SRS}
+است.
+\paragraph*{2}
+ترکیب یک نمونه ی 
+\lr{SRS}
+به حجم 
+$n_1$
+از یک جامعه به حجم 
+$N$
+با یک نمونه ی دیگر
+\lr{SRS}
+به حجم 
+$n_2$
+از یک جامعه 
+$N-n_1$
+تایی،
+،خود یک نمونه 
+\lr{SRS}
+است.
+\section*{با جایگزاری}
+\subsection*{ثابت کنید که }
+\begin{equation*}
+	E(\bar{y_n})=y_n
+\end{equation*}
+تعریف می کنیم:
+\\
+$Z_i$
+:تعداد دفعات ظاهر شدن عضو
+$i$
+ام در نمونه 
+
+می توان گفت:
+\begin{gather*}
+	Z_i\sim B(n,\frac{1}{N}) \\
+	E(Z_i)=\frac{n}{N} \\
+	Var(Z_i)=\frac{n}{N}(1-\frac{1}{N}) \\
+	Cov(Z_i,Z_j)=-\frac{n}{N^2}
+\end{gather*}
+در نتیجه:
+\begin{multline*}
+	E(\bar{y_n})=\frac{1}{n}E(\sum_{i=1}^ny_i)=\frac{1}{n}E(\sum_{i=1}^ny_i)
+	=\frac{1}{n}E[\sum_{i=1}^{N}Z_iy_i]=\frac{1}{\cancel{n}}\frac{\cancel{n}}{N}\sum_{i=1}^{N}y_i
+	=\\=
+	\frac{\sum_{i=1}^{N}y_i}{N}=\bar{y_N}
+\end{multline*}
+حکم ثابت شد.
+\subsection*{اثبات کنید که:}
+\begin{equation*}
+	Var(\bar{y_n})=\frac{\sigma ^2}{n}=(1-\frac{1}{N})\frac{S^2}{n}
+\end{equation*}
+اثبات:
+\begin{multline*}
+	Var(\bar{y_n})=\frac{1}{n^2}Var(\sum_{i=1}^{n}y_i)=\frac{1}{n^2}Var(\sum_{i=1}^{N}Z_iy_i)
+	=\\=
+	\frac{1}{n^2}\{\sum_{i=1}^{N}y_i^2Var(Z_i)+\underset{i\neq j}{\sum\sum }y_iy_jCov(Z_i,Z_j) \}
+	=\frac{1}{n^2}\{\frac{n(N-1)}{N^2}\sum_{i=1}^{N}y_i^2+\underset{i\neq j}{\sum\sum }y_iy_jCov(Z_i,Z_j) \}
+	=\\=
+	\frac{1}{n^2}\{\frac{n(N-1)}{N^2}\sum_{i=1}^{N}y_i^2-\frac{n}{N^2}\underset{i\neq j}{\sum\sum }y_iy_j \}
+	=\frac{1}{n^2}.\frac{n}{N^2}\{(N-1)\sum_{i=1}^{N}y_i^2-\underset{i\neq j}{\sum\sum }y_iy_j \}
+	=\\=
+	\frac{1}{n^2}.\frac{n}{N^2}.(N-1)\{\sum_{i=1}^{N}y_i^2-\frac{1}{N-1}\underset{i\neq j}{\sum\sum }y_iy_j \}
+	=\\=
+	\frac{1}{n^2}.\frac{n}{N^2}.(N-1)\{\sum_{i=1}^{N}y_i^2-\frac{1}{N-1}(\sum_{i=1}^{N}y_i)^2+\frac{1}{N-1}\sum_{i=1}^{N}y_i^2 \}
+	=\\=
+	\frac{1}{n^2}.\frac{n}{N^2}\{(N-1)\sum_{i=1}^{N}y_i^2-(\sum_{i=1}^{N}y_i)^2+\sum_{i=1}^{N}y_i^2 \}
+	=\frac{1}{n^2}.\frac{n}{N^2}\{N\sum_{i=1}^{N}y_i^2-(\sum_{i=1}^{N}y_i)^2 \}
+	=\\=
+	\frac{1}{n^2}.\frac{n}{N^2}.N\{\sum_{i=1}^{N}y_i^2-\frac{1}{N}(\sum_{i=1}^{N}y_i)^2 \}
+	=\frac{1}{n^2}.\frac{n}{N^2}.N\{\sum_{i=1}^{N}y_i^2-N\bar{y_N}^2 \}
+	=\\=
+	\frac{1}{n^2}.\frac{n}{N^2}.N.N\sigma ^2 
+	=\frac{\sigma^2}{n}
+\end{multline*}
+حکم ثابت شد.
+\section*{ثابت کنید که برآوردگر زیر نااریب است:}
+\begin{equation*}
+	E(\frac{s^2}{n})=\frac{\sigma^2}{n}
+\end{equation*}
+اثبات:
+\begin{multline*}
+	E(s^2)=\frac{1}{n-1}E(\sum_{i=1}^{n}y_i^2-n\bar{y_n}^2)
+	=\frac{1}{n}\{E(\sum_{i=1}^{n}y_i^2)-nE(\bar{y_n}^2)\}
+	=\\=
+	\frac{1}{n-1}\{E(\sum_{i=1}^{n}y_i^2) -n(Var(\bar{y_n})+[E(\bar{y_n})]^2)\}
+	=\frac{1}{n-1}\{E(\sum_{i=1}^{n}y_i^2) -n(\frac{\sigma^2}{n})-n\bar{y_N}^2\}
+	=\\=
+	\frac{1}{n-1}\{\frac{n}{N}E(\sum_{i=1}^{N}y_i^2) -\sigma^2-n\bar{y_N}^2\}
+	=\frac{1}{n-1}\{\frac{n}{N}(\sum_{i=1}^{N}y_i^2) -\sigma^2-n\bar{y_N}^2\}
+	=\\=
+	\frac{1}{n-1}.\frac{n}{N}\{\sum_{i=1}^{N}y_i^2-N\bar{y_N}^2 -\frac{N}{n}\sigma^2\}
+	=\frac{1}{n-1}.\frac{n}{N}\{N\sigma ^ 2-\frac{N}{n}\sigma^2\}
+	=\\=
+	\frac{1}{\cancel{n-1}}.\frac{\cancel{n}}{\cancel{N}}\frac{\cancel{N}\cancel{(n-1)}}{\cancel{n}}\sigma^2
+	=\sigma^2
+\end{multline*}
+\section*{نسبت در یک جامعه}
+\begin{gather*}
+	\begin{pmatrix}
+		1 \\
+		0 \\
+		0 \\
+		\vdots \\
+		1
+	\end{pmatrix}
+	\overset{SRS:Without replacing}{\longrightarrow}
+	\begin{pmatrix}
+		1\\
+		0\\
+		\vdots \\
+		0
+	\end{pmatrix}
+	\\
+	P=\frac{A}{N}\longrightarrow p=\frac{a}{n}
+\end{gather*}
+کافی است ثابت کنیم که 
+$p$
+یک برآوردگر مناسب برای 
+$P$
+است.
+می توان گفت می توان گفت جامعه ی ما مقادیر 0 و 1 دارد شامل اعضای دارای وِزگی مورد نظر و اعضای فاقد این ویژگی، یعنی:
+\begin{gather*}
+	P=\frac{\sum_{i=1}^{N}y_i}{N}=\bar{y_N} \\
+	p=\frac{\sum_{i=1}^ny_i}{n}=\bar{y_n}
+\end{gather*}
+در نتیجه می دانیم:
+\subsection*{بدون جایگزاری}
+\begin{gather*}
+	E(p)=P \\
+	Var(p)=(1-\frac{n}{N})\frac{S^2}{n}=\frac{N-n}{N-1}.\frac{P(P-1) }{n}\\
+	S^2=\frac{1}{N-1}\{\sum_{i=1}^Ny_i^2-N\bar{y_N}^2\}=
+	\frac{1}{N-1}\{A-N\frac{A}{N^2}\}
+	=\\=
+	\frac{1}{N-1}NP(1-P)
+\end{gather*}
+می خواهیم 
+$\hat{Var}(p)$
+را محاسبه کنیم.
+\begin{multline*}
+	s^2=\frac{1}{n-1}\sum_{i=1}^{n}(y_i-\bar{y_n})^2
+	=\frac{1}{n-1}\{\sum_{i=1}^ny_i^2 -n\bar{y_n}^2\}
+	=\frac{1}{n-1}\{a-np^2\}=\frac{nP}{n-1}(1-P) \\
+	\Rightarrow 
+	\hat{Var}(p)=\frac{N-n}{n-1}.\frac{p(1-p)}{N}
+\end{multline*}
+رابطه ی زیر نیز برای برآورد تعداد اعضای خاص یک جامعه مفید است.
+\subparagraph*{مثال}
+فرض کنید جامعه ای شامل 5 دانش آموز دختر و پسر، بصورت زیر است:
+\begin{equation*}
+	\begin{matrix}
+		0 & 1 & 1 & 0 & 1
+	\end{matrix}
+\end{equation*}
+\begin{enumerate}
+	\item تمام نمونه های دوتایی ممکن با روش
+	\lr{SRS}
+	را تشکیل دهید.
+	\begin{gather*}
+		p=0:(0,0)\\
+		p=\frac{1}{2}:(0,1),(0,1),(0,1),(0,1),(0,1),(0,1) \\
+		p=1:(1,1),(1,1),(1,1)
+	\end{gather*}
+	\item بر اساس قسمت قبل ثابت کنید:
+	\begin{align*}
+		E(p)&=P & Var(p)=\frac{N-n}{N-1}\frac{P(1-P)}{n}
+	\end{align*}
+\end{enumerate}
+داریم:
+\begin{LTR}
+	\begin{tabular}{c|ccc}
+		$p$ & $0$ & $\frac{1}{2}$ & $1$ \\
+		\hline
+		$\frac{1}{10}$ & $\frac{6}{10}$ & $\frac{3}{10}$
+	\end{tabular}
+\end{LTR}
+در نتیجه:
+\begin{gather*}
+	E(p)=0\times\frac{1}{10}+\frac{1}{2}\times\frac{6}{10}+1\times\frac{3}{10}=\frac{6}{10}=P \\
+	Var(p)=E(p^2)-[E(p)]^2=\frac{9}{20}-\frac{36}{100}=\frac{9}{100}
+\end{gather*}
+\section*{پیدا کردن حجم نمونه}
+می دانیم که:
+\begin{equation*}
+	\hat{\theta}\sim N(\theta,Var(\hat{\theta}))
+\end{equation*}
+\subsection*{بر اساس احتمال}
+در برآورد 
+$\theta$
+با استفاده از 
+$\hat{\theta}$
+می خواهیم حجم نمونه را به گونه ای تعیین کنیم که قدر مطلق خطای مطلق با احتمال
+$1-\alpha$
+کمتر از 
+$e$
+باشد.
+یعنی:
+\begin{equation*}
+	P(|\hat{\theta}-\theta|<e)=1-\alpha
+\end{equation*}
+می نویسیم:
+\begin{multline*}
+	P(|\hat{\theta}-\theta|<e)=P(P(-e<\hat{\theta}-\theta<e))=
+	=\\=
+	P(-\frac{e}{\sqrt{Var(\hat{\theta})}}
+	<\frac{\theta-\hat{\theta}}{Var(\hat{\theta})}<
+	\frac{e}{\sqrt{Var(\hat{\theta})}})
+\end{multline*}
+به سادگی می توان دریافت که:
+\begin{align*}
+	Z_{\frac{\alpha}{2}}&=-Z_{1-\frac{\alpha}{2}}=-\frac{e}{\sqrt{Var(\hat{\theta})}}
+	&
+	Z_{1-\frac{\alpha}{2}}=-\frac{e}{\sqrt{Var(\hat{\theta})}}
+\end{align*}
+در نهایت:
+\begin{equation*}
+	Z_{1-\frac{\alpha}{2}}=-\frac{e}{\sqrt{Var(\hat{\theta})}}
+	\overset{Power~2}{\longrightarrow}Z^2_{1-\frac{\alpha}{2}}=\frac{e^2}{Var(\hat{\theta})}
+	\Rightarrow Var(\hat{\theta})=\frac{e^2}{Z^2_{1-\frac{\alpha}{2}}}
+\end{equation*}
+\subsection*{مثال}
+برآورد 
+$\bar{y_n}$
+در روش 
+\lr{SRS}
+بدون جایگزاری:
+\begin{gather*}
+	Var(\bar{y_n})=(1-\frac{n}{N})\frac{S^2}{n}=\frac{e^2}{Z^2_{1-\frac{\alpha}{2}}}=V_0 \\
+	\frac{S^2}{n}-\frac{S^2}{N}=v_0 \Rightarrow \frac{s^2}{n}=V_0+\frac{s^2}{N} \\
+	\frac{n}{S^2}=\frac{1}{V_0+\frac{S^2}{N}} \rightarrow n=\frac{S^2}{V_0+\frac{S^2}{N}}
+\end{gather*}
+از آنجایی که اطلااعتی نه از 
+$S^2$
+و نه از 
+$s^2$
+،نیاز داریم تا یک نمونه ی مقدماتی به حجم 
+$m$
+بگیریم و 
+$s_0^2$
+را استفاده کنیم.
+\begin{equation*}
+	s_0^2=\frac{\sum_{i=1}^{m}(y_i-\bar{y_m})}{m-1}
+\end{equation*}
+برآورد 
+$P$
+بدون جایگزاری:
+\begin{gather*}
+	Var(p)=\frac{e^2}{Z^2_{1-\frac{\alpha}{2}}}=V_0 \\
+	\frac{N-n}{N_1}.\frac{P(1-P)}{n}=V_0 \\
+	\frac{N-n}{n}=V_0\frac{N-1}{P(1-P)} \\
+	n=\frac{P(1-P)N}{(N-1)V_0+P(1-P)}
+\end{gather*}
+می خواهیم برآورگری برای 
+$P(1-P)$
+پیدا کنیم.
+\begin{multline*}
+	E[p_0(1-p_0)]=E(p_0)-E(p_0^2)=P-\frac{N-m}{N-1}.\frac{P(1-P)}{m}-P^2 
+	=\\=
+	P(1-P)[1-\frac{N-m}{m(N-1)}]
+	=P(1-P)\frac{N(m-1)}{m(N-1)}
+\end{multline*}
+در نتیجه برآوردگر زیر نااریب است.
+\begin{equation*}
+	\frac{m(N-1)}{N(m-1)}p_0(1-p_0)
+\end{equation*}
+\subsection*{مثال:}
+در یک دانشکده به کمک نمونه ی مقدماتی 100 تایی درصد دانش جویان شاغل 25 درصد برآورد شده است. قصد داریم با نمونه گیری
+\lr{SRS}
+تعداد دانشجویان شاغل را به گونه ای برآورد کنیم که قدر مطلق خطای مطلق به احتمال 95 درصد کمتر از 10 درصد باشد.تعداد کل دانشجویان 1200 است. چه تعداد نمونه لازم است؟
+\subsection{قدر مطلق خطای نسبی}
+در برآورد 
+$\theta$
+با استفاده از 
+$\hat{\theta}$
+می خواهیم حجم نمونه را به گونه ای تعیین کنیم که قدر مطلق خطای نسبی با احتمال
+$1-\alpha$
+کمتر از 
+$e$
+باشد.
+\begin{gather*}
+	P(|\frac{\hat{\theta}-\theta}{\theta}|<e)=P(-e<\frac{\hat{\theta}-\theta}{\theta}<e) \\
+	P(-e<\frac{\hat{\theta}-\theta}{\theta}<e)=P(-e\theta<\hat{\theta}-\theta<e\theta)\\
+	P(-e\theta<\hat{\theta}-\theta<e\theta)=
+	P(-\frac{e\theta}{\sqrt{Var(\hat{\theta})}}
+	<\frac{\hat{\theta}-\theta}{\sqrt{Var(\hat{\theta})}}<
+	\frac{e\theta}{\sqrt{Var(\hat{\theta})}})\\
+	\Rightarrow \frac{e\theta}{\sqrt{Var(\hat{\theta})}}=Z_{1-\frac{\alpha}{2}} \\
+	\frac{e^2\theta^2}{Var(\hat{\theta})}=Z^2_{1-\frac{\alpha}{2}} \\
+	Var(\hat{\theta})=\frac{e^2\theta^2}{Z_{1-\frac{\alpha}{2}}} 
+\end{gather*}
+از آنجایی که 
+$\theta$
+یک مقدار مجهول است از 
+$\hat{\theta}$
+استفاده می کنیم.
+\subsection*{بر اساس طول بازه ی اطمینان}
+دربرآورد 
+$\theta$
+با استفاده از 
+$\hat{\theta}$
+می خواهیم حجم نمونه را به گون های تعیین کنیم که طول فاصله اطمینان 
+$1-\alpha$
+درصدی برابر با
+$2L$
+شود.
+\begin{gather*}
+	Z=\frac{\hat{\theta}-\theta}{\sqrt{Var(\hat{\theta})}} \\
+	P(a<Z<b)=1-\alpha \\
+	P(-Z_{1-\frac{\alpha}{2}}<\frac{\hat{\theta}-\theta}{Var(\hat{\theta})}<Z_{1-\frac{\alpha}{2}})
+	=P(Z_{1-\frac{\alpha}{2}}\sqrt{Var(\hat{\theta})}
+	<\hat{\theta}-\theta<
+	Z_{1-\frac{\alpha}{2}}\sqrt{Var(\hat{\theta})} 
+	=\\=
+	P[\hat{\theta}-Z_{1-\frac{\alpha}{2}}\sqrt{Var(\hat{\theta})}
+	<\theta<
+	\hat{\theta}+Z_{1-\frac{\alpha}{2}}\sqrt{Var(\hat{\theta})}] \\
+	2Z_{1-\frac{\alpha}{2}}\sqrt{Var(\hat{\theta})}=2L \\
+	L=Z_{1-\frac{\alpha}{2}}\sqrt{Var(\hat{\theta})} \\
+	L^2=Z^2_{1-\frac{\alpha}{2}}Var(\hat{\theta}) \\
+	Var(\hat{\theta})=\frac{L^2}{Z^2_{1-\frac{\alpha}{2}}}
+\end{gather*}
+\rule{\textwidth}{0.4pt}

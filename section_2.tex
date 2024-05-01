@@ -1,0 +1,136 @@
+	\section*{نمونه گیری با طبقه بندی}
+\subsection*{تعریف}
+در نمونه گیری طبقه بندی جامعه می بایست به طبقات همگن طبقه بندی شود، به گونه ای که بین طبقات اختلاف وجود داشته باشد.
+\subsection*{روش نمونه گیری}
+به گونه ای است که از هر طبقه نمونه ای به روش 
+\lr{SRS}
+انتخاب می شود و 
+انتخاب نمونه از هر طبقه
+\underline{ مستقل}
+از انتخاب نمونه از طبقه دیگر است.
+\\
+جامعه:
+\begin{equation*}
+	\begin{pmatrix}
+		y_{1\,1} \\
+		\vdots \\
+		y_{1\,N_1} \\
+		\rule{0.7cm}{0.2pt} \\
+		y_{2\,1} \\
+		\vdots \\
+		y_{2\,N_2} \\
+		\rule{0.7cm}{0.2pt} \\
+		\vdots \\
+		\rule{0.7cm}{0.2pt} \\
+		y_{H\,1} \\
+		\vdots \\
+		y_{H\,N_H} \\
+	\end{pmatrix}
+	\longrightarrow 
+	\begin{cases}
+		N_1:y_{1\, 1},\dots , y_{1\, N_1}:\bar{y}_{1.} \\
+		N_2:y_{2\, 1},\dots , y_{2\, N_2}:\bar{y}_{2.} \\
+		\vdots \\
+		N_H:y_{H\, 1},\dots , y_{H\, N_H}:\bar{y}_{H.} \\
+	\end{cases}
+\end{equation*}
+نمونه:
+\begin{equation*}
+	\begin{pmatrix}
+		y_{1\,1} \\
+		\vdots \\
+		y_{1\,n_1} \\
+		\rule{0.7cm}{0.2pt} \\
+		y_{2\,1} \\
+		\vdots \\
+		y_{2\,n_2} \\
+		\rule{0.7cm}{0.2pt} \\
+		\vdots \\
+		\rule{0.7cm}{0.2pt} \\
+		y_{H\,1} \\
+		\vdots \\
+		y_{H\,n_H} \\
+	\end{pmatrix}
+	\longrightarrow 
+	\begin{cases}
+		n_1:y_{1\, 1},\dots , y_{1\, n_1}:\bar{y_{1}} \\
+		n_2:y_{2\, 1},\dots , y_{2\, n_2}:\bar{y_{2}} \\
+		\vdots \\
+		n_H:y_{H\, 1},\dots , y_{H\, n_H}:\bar{y}_{H} \\
+	\end{cases}
+\end{equation*}
+\subsection*{چند تعریف:}
+\begin{enumerate}
+	\item میانگین جامعه:
+	\begin{equation*}
+		\bar{y}_N\footnotemark[1]=\frac{\sum_{i=1}^{H} \sum_{j=1}^{N_i}y_{ij}}{N}
+	\end{equation*}
+	\item انحراف از معیار جامعه:
+	\begin{equation*}
+		S^2=\frac{\sum_{i=1}^{H} \sum_{j=1}^{N_i} (y_{ij}-\bar{y}_N)^2}{N-1}
+	\end{equation*}
+	\item میاگین طبقه 
+	$i$
+	ام:
+	\begin{equation*}
+		\bar{y}_{i.}=\frac{\sum_{j=1}^{N_i}y_{ij}}{N_i}
+	\end{equation*}
+	\item انحراف از معیار طبقه 
+	$i$
+	ام:
+	\begin{equation*}
+		S_i^2=\frac{\sum_{j=1}^{N_i}(y_{ij}-\bar{y}_{i.})^2}{N_i-1}
+	\end{equation*}
+	\footnotetext[1]{$N=\sum_{i=1}^{H}N_i$}
+	\item میانگین نمونه ی طبقه 
+	$i$
+	ام:
+	\begin{equation*}
+		\bar{y}_{i}=\frac{\sum_{j=1}^{n_i}y_{ij}}{n_i}
+	\end{equation*}
+	\item انجراف از معیار نمونه 
+	$i$
+	ام:
+	\begin{equation*}
+		s_i^2=\frac{\sum_{j=1}^{n_i}(y_{ij}-\bar{y}_{i})^2}{n_i-1}
+	\end{equation*}
+\end{enumerate}
+اگر قرار دهیم که 
+$W_i=\frac{N_i}{N}$
+آنگاه می توان گفت که 
+$\bar{y}_{str}$
+یک برآوردگر خوب برای 
+$\bar{y_N}$
+است.
+\begin{equation*}
+	\bar{y}_{str}=\sum_{i=1}^{H}W_i\, \bar{y_i}
+\end{equation*}
+ثابت کنید که:
+\begin{equation*}
+	E(\bar{y}_{str})=\bar{y}_N
+\end{equation*}
+برهان:
+\begin{multline*}
+	E(\bar{y}_{str})=E[\sum_{i=1}^{H}W_i\, \bar{y}_i]
+	=\sum_{i=1}^{H}W_i\,E(\bar{y}_i)=
+	\sum_{i=1}^{H}\frac{N_i}{N} \bar{y}_{i.}=\frac{1}{N}\sum_{i=1}^{H}N_i\,\bar{y}_{i.}
+	=\\=\frac{\sum_{i=1}^{H}\cancel{N_i}\frac{1}{\cancel{N_i}}\sum_{j=1}^{N_i}y_{ij}}{N}
+	=\frac{\sum_{i=1}^{H}\sum_{j=1}^{N_i}y_{ij}}{N}=\bar{y}_N
+\end{multline*}
+مقدار خطای برآورد را پیدا کنید. 
+\\
+از آنجایی که برآوردگر ما اریب است، مقدار خطای آن با واریانس آن برابر است:
+\begin{multline*}
+	Var(\bar{y}_{str})
+	=Var[\sum_{i=1}^{H}W_i\,\bar{y}_i]
+	=\sum_{i=1}^{H}W_i^2\, Var{\bar{y}_i}+\underset{indpendent\Rightarrow 0}{\underbrace{\underset{i\neq j}{\sum^H\sum^H}\, Cov(\bar{y}_i,\bar{y}_j)}}
+	=\\=
+	\sum_{i=1}^{H}W_i^2\, (1-\frac{n_i}{N_i})\frac{s_i^2}{n_i}\footnotemark[2]
+	=\sum_{i=1}^{H}\frac{N_i^2}{N^2}(1-\frac{n_i}{N_i})\frac{s_i^2}{n_i}
+	=\frac{1}{N^2}\sum_{i=1}^{H}N_i(N_i-n_i)\frac{s_i^2}{n_i}\footnotemark[4]
+	=\\=
+	\sum_{i=1}^{H}W_i^2\, \frac{S_i^2}{n_i}-\frac{1}{N}\sum_{i=1}^{H}W_i\, S_i^{2}\,\footnotemark[3]
+\end{multline*}
+\footnotetext[2]{فرمول 1}
+\footnotetext[3]{فرمول 2}
+\footnotetext[4]{فرمول 3}

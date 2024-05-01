@@ -1,0 +1,27 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{colonequals}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{mathtools}
+\pgfplotsset{compat=1.7}
+\usepackage{xepersian}
+\settextfont{B Nazanin}%--> this is OK
+%\setmathdigitfont{Tahoma}%--> this produce error for these Persian fonts: Yas, B Yas, XB Niloofar, PGaramond etc.
+%\setmathdigitfont{XB Niloofar}
+\pagestyle{fancy}
+\begin{document}
+	\include{header.tex}
+	\chapter*{مباحث میان ترم اول:}
+	\include{section_1.tex}
+	\chapter*{مباحث میان ترم دوم:}
+	\include{section_2.tex}
+\end{document}
