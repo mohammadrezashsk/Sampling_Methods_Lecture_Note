@@ -6,4 +6,4 @@ Section_2.tex: The XeLateX code for section 2
 
 lecture.tex: The main XelaTeX code file
 
-REQUIERMENT: B-Nazanin font
+
