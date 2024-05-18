@@ -290,4 +290,77 @@ $S_i^2=S_0^2$
 			n\times\frac{\sum_{i=1}^{H}W_iS_i\sqrt{C_i}}{\sum_{i=1}^{H}\frac{W_iS_i}{\sqrt{C-i}}}
 			\Rightarrow n=(C-C_0)\frac{\sum_{i=1}^{H}\frac{W_iS_i}{\sqrt{C_i}}}{\sum_{i=1}^{H}W_iS_i\sqrt{C_i}}
 		\end{multline*}
+		تمرین:
+		\\
+		$n_i$
+		ها را به گونه ای تعیین کنید که با واریانس ثابت، میانگین هزینه ثابت شود.
+		\subsection*{تمرین}
+		در یک نمونه گیری با طبقه بندی، تابع هزینه بصورت زیر است.
+		\begin{equation*}
+			C=\sum_{i=1}^{2}C_i\,n_i
+		\end{equation*}
+		\begin{itemize}
+			\item[$\bullet$] $W_i$: وزن طبقه ی 
+			$i$
+			ام
+			\item[$\bullet$] $S_i$: انحراف معیار طبقه 
+			$i$
+			ام
+		\end{itemize}
+		\begin{LTR}
+			\begin{tabular}{c|ccc}
+				\lr{H} & $W_i$ & $S_i$ & $C_i$ \\
+				1 & 0.4 & 10 & 400 \\
+				2 & 0.6 & 20 & 900 
+			\end{tabular}
+		\end{LTR}
+		اگر 
+		$n$
+		حجم نمونه باشد، برای 
+		$Var(\bar{y}_{str})$
+		مشخص وقتی مقدار 
+		$C$
+		کمینه است، مقدار
+		$\frac{n_1}{n}$
+		چقدر است؟
+		\begin{equation*}
+			\frac{n_1}{n}=
+			\frac
+			{\frac{W_1S_1}{\sqrt{C_1}}}
+			{\frac{W_1S_1}{\sqrt{C_1}}+\frac{W_2S_2}{\sqrt{C_2}}}
+			=
+			\frac
+			{\frac{0.4\times 10}{20} }
+			{\frac{0.4\times 10}{20}+\frac{0.6\times 26}{30}}
+			=\frac{1}{3}
+		\end{equation*}
+		\subsection*{تخصیص نیمن:}
+		\begin{gather*}
+			\forall i \in \{1,\dots,H\}:\, C_i=C \\
+			C^*=C_0+\sum_{i=1}^{H}n_i C=C_0+C\sum_{i=1}^{H}n_i=C_0+Cn \\
+			n_i=\frac{\frac{W_iS_i}{\cancel{\sqrt{C}}}}
+			{\frac{\sum_{i=1}^{W_iS_i}}{\cancel{\sqrt{C}}}}\times n
+			=
+			\frac{W_iS_i}{\sum_{i=1}^{H}W_iS_i}\times n
+		\end{gather*}
+		\begin{multline*}
+			Var(\bar{y}_{str})=\sum_{i=1}^{H}W_i^2(1-\frac{n_i}{N_i})\frac{S_i^2}{n_i}=
+			\sum_{i=1}^{H}\frac{W_i^2S_i^2}{n_i}-
+			\sum_{i=1}^{H}W_i.\frac{\cancel{N_i}}{N}.\frac{\cancel{n_i}}{\cancel{N_i}}.\frac{S_i^2}{\cancel{n_i}}
+			=\\=
+			\sum_{i=1}^{H}\frac{W_i^2S_i^2}{n_i}-\frac{1}{N}\sum_{i=1}^{H}W_iS_i^2
+			=\sum_{i=1}^{H}W_i^{\cancel{2}}\frac{S_i^2}{\frac{W_iS_i}{\sum_{i=1}^{H}W_IS_i}\times n}
+			-\frac{1}{N}\sum_{i=1}^{H}W_iS_i^2
+			=\\=
+			\frac{1}{n}\sum_{i=1}^{H}W_iS_i(\sum_{i=1}^{H}W_iS_i)-\frac{1}{N}\sum_{i=1}^{H}W_iS_i^2
+			=\frac{1}{n}(\sum_{i=1}^{H}W_iS_i)^2-\frac{1}{N}\sum_{i=1}^{H}W_iS_i^2
+		\end{multline*}
+		فرض کنید حجم طبقات بزرگ باشد.
+		\begin{equation*}
+			N_i \gg 
+		\end{equation*}
+		آنگاه:
+		\begin{equation*}
+			V_{ran}\geq V_{prop} \geq V_{opt}
+		\end{equation*}
 \end{enumerate}
